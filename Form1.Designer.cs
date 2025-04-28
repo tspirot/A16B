@@ -30,7 +30,6 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.buttonZatvori = new System.Windows.Forms.Button();
@@ -42,6 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
@@ -61,7 +61,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(991, 533);
             this.tabControl1.TabIndex = 11;
-            this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
             // tabPage1
             // 
@@ -83,16 +82,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Unesi prijavu";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(983, 615);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Statistika";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -144,6 +133,7 @@
             // 
             // comboBoxIzlozba
             // 
+            this.comboBoxIzlozba.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxIzlozba.FormattingEnabled = true;
             this.comboBoxIzlozba.Location = new System.Drawing.Point(125, 61);
             this.comboBoxIzlozba.Name = "comboBoxIzlozba";
@@ -152,6 +142,7 @@
             // 
             // comboBoxKategorija
             // 
+            this.comboBoxKategorija.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxKategorija.FormattingEnabled = true;
             this.comboBoxKategorija.Location = new System.Drawing.Point(125, 96);
             this.comboBoxKategorija.Name = "comboBoxKategorija";
@@ -160,6 +151,7 @@
             // 
             // comboBoxPas
             // 
+            this.comboBoxPas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPas.FormattingEnabled = true;
             this.comboBoxPas.Location = new System.Drawing.Point(125, 27);
             this.comboBoxPas.Name = "comboBoxPas";
@@ -193,12 +185,22 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Pas";
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(983, 504);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Statistika";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // tabPage3
             // 
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(983, 615);
+            this.tabPage3.Size = new System.Drawing.Size(983, 504);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "O aplikaciji";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -208,11 +210,10 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(983, 615);
+            this.tabPage4.Size = new System.Drawing.Size(983, 504);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Izlaz";
             this.tabPage4.UseVisualStyleBackColor = true;
-            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
             // Form1
             // 
@@ -222,6 +223,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Prijava na izlozbu";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
